@@ -418,6 +418,51 @@ h4 {
   margin-top: 0;
 }
 
+.question-list,
+.finding-list,
+.solution-list,
+.part-list,
+.detail-list {
+  margin: 14px 0 0;
+  padding-left: 1.25rem;
+}
+
+.question-list,
+.finding-list,
+.solution-list,
+.part-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.detail-list {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.question-list li,
+.finding-list li,
+.solution-list li,
+.part-list li,
+.detail-list li {
+  padding-left: 0.2rem;
+  line-height: 1.7;
+}
+
+.question-list li::marker,
+.finding-list li::marker,
+.solution-list li::marker,
+.part-list li::marker,
+.detail-list li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.part-list strong,
+.solution-list strong {
+  color: var(--accent-dark);
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -480,6 +525,16 @@ h4 {
   text-align: center;
 }
 
+.paper-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px -34px rgba(27, 31, 39, 0.55);
+}
+
 /* Models */
 
 .model-list {
@@ -537,6 +592,29 @@ h4 {
 .model-structure dd {
   padding: 1.1rem 1.5rem;
   line-height: 1.7;
+}
+
+.model-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  padding: 1.05rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--line);
+  background: #fbfaf5;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.model-links a {
+  color: var(--accent-dark);
+  border-bottom: 1px solid rgba(143, 53, 31, 0.28);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.model-links a:hover,
+.model-links a:focus-visible {
+  color: var(--accent);
+  border-color: currentColor;
 }
 
 /* Problems */

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mathematical Research and Modeling Portfolio | Max Xuming Zhang</title>
-  <meta name="description" content="A curated collection of research, simulations, and selected problem-solving notes by Max Xuming Zhang.">
+  <meta name="description" content="Research, modeling, and mathematical problem-solving by Max Xuming Zhang, including an NCMC paper on non-Markovian random walks and a HiMCM 2024 carbon-footprint model.">
   <meta name="theme-color" content="#141f2e">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>∑</text></svg>">
@@ -56,7 +56,7 @@
           <a class="module-card" href="#problems">
             <span class="module-index">03</span>
             <span class="module-title">Selected Problems</span>
-            <span class="module-copy">AMC/AIME problems worked with first approaches, failures, insights, and alternatives.</span>
+            <span class="module-copy">Four multi-part Ross application problems, shown with full prompts and the path from first approach to final solution.</span>
             <span class="module-arrow" aria-hidden="true">→</span>
           </a>
           <a class="module-card" href="#thinking">
@@ -74,14 +74,14 @@
         <div class="section-heading">
           <p class="section-kicker">01 · Pinned research</p>
           <h2>Research Paper</h2>
-          <p class="section-note">A summary of the work, not the full 19-page paper.</p>
+          <p class="section-note">A summary of the 19-page NCMC 2026 paper, with the full PDF and code appendix available separately.</p>
         </div>
 
         <article class="paper-card">
           <div class="paper-title-row">
             <div>
-              <p class="paper-meta">19-page paper · Non-Markovian random walks</p>
-              <h3><span class="ph" data-fill="paper.title">Paper title — to be provided</span></h3>
+              <p class="paper-meta">NCMC 2026 · Max Zhang · 19 pages</p>
+              <h3>Memory, Repulsion, and Attraction: Phase Transitions in Non-Markovian Random Walks on a Two-Dimensional Lattice</h3>
             </div>
             <span class="status-chip">Featured research</span>
           </div>
@@ -96,32 +96,55 @@
           <div class="paper-grid">
             <div class="paper-body">
               <h4>Abstract</h4>
-              <!-- Replace with a 100-150 word summary. -->
-              <p class="ph block" data-fill="paper.abstract">100–150 word abstract — to be provided</p>
+              <p>
+                This paper studies a non-Markovian random walk on a 100×100 two-dimensional lattice in
+                which the walker remembers past visits, avoids recently visited neighborhoods, and can be
+                drawn back toward the origin. The model combines an exponentially decaying memory field,
+                Logistic soft repulsion based on a 5×5 local memory intensity, and an optional central
+                attraction. Across 10,000 baseline Monte Carlo trials, the pure repulsive walker escaped
+                with probability 100% and a mean escape time of 722.69 steps, much faster than the roughly
+                2,500-3,000 steps of a classical simple random walk. Nonlinear regression gives strong
+                exponential scaling laws in the memory decay rate, repulsion threshold, and Logistic
+                steepness; increasing central attraction produces a sharp exploration-return phase
+                transition. The results provide numerical evidence that memory and repulsion change the
+                classical recurrence behavior of the two-dimensional random walk.
+              </p>
 
               <h4>Core research question</h4>
-              <!-- Non-Markovian random walk is the topic; the exact question should go here. -->
-              <p class="ph block" data-fill="paper.question">Core research question — to be provided</p>
+              <p>
+                What happens to recurrence, transience, and escape time when a two-dimensional random
+                walker is given a decaying memory of past visits, a soft local repulsion from recently
+                visited regions, and a competing attraction back toward the origin?
+              </p>
+              <ol class="question-list">
+                <li>How does the memory decay rate affect escape efficiency, and is there an optimal intermediate regime?</li>
+                <li>How sensitive is the walker to the repulsion threshold, and can a small change cause a dramatic shift?</li>
+                <li>Does central attraction only slow escape, or can it qualitatively reverse the walker's fate?</li>
+                <li>Is the memory-repulsion walker ultimately transient or recurrent?</li>
+              </ol>
 
               <h4>Main findings</h4>
-              <p class="ph block" data-fill="paper.findings">Most important findings — to be provided</p>
+              <ul class="finding-list">
+                <li><strong>Pure repulsion is numerically transient.</strong> All 10,000 baseline trials escaped; the mean was 722.69 steps, the median was 579, the 95% CI was [712.88, 732.49], and the maximum was 4,886. A classical simple random walk needs roughly 2,500-3,000 steps under the same setting.</li>
+                <li><strong>Three strong scaling laws emerged.</strong> τ(k) = 1608.628e<sup>−2.4155k</sup> + 666.870 (R² = 0.9956), τ(c) = 138.880e<sup>0.3002c</sup> + 13.487 (R² = 0.9930), and τ(λ) = 659.880e<sup>8.7348λ</sup> − 193.017 (R² = 0.9877).</li>
+                <li><strong>Central attraction causes a sharp phase transition.</strong> Mean escape times are about 2,700 steps at α = 0.2, 7,800 at α = 0.3, 28,000 at α = 0.4, and 120,000 at α = 0.5.</li>
+                <li><strong>Classical behavior requires extreme parameters.</strong> The model approaches the memoryless case only near k ≈ −0.15, c ≈ 10.2, or λ ≈ 0.18.</li>
+              </ul>
 
               <div class="button-row">
-                <!-- Replace each disabled button with an anchor once links are ready, e.g.:
-                     <a class="btn btn-primary" href="paper.pdf">View Full Paper</a> -->
-                <button class="btn btn-primary" type="button" disabled title="Link to be provided">View Full Paper</button>
-                <button class="btn" type="button" disabled title="Link to be provided">View Code</button>
+                <a class="btn btn-primary" href="assets/papers/NCMC_paper_Max_Zhang.pdf" target="_blank" rel="noopener">View Full Paper</a>
+                <a class="btn" href="assets/papers/NCMC_paper_Max_Zhang.pdf#page=16" target="_blank" rel="noopener">View Code Appendix</a>
               </div>
             </div>
 
             <div class="paper-figures">
               <figure class="figure-slot">
-                <figcaption>Figure 1 · <span class="ph" data-fill="paper.figure1.caption">Caption to be provided</span></figcaption>
-                <div class="figure-empty" data-fill="paper.figure1.image">Most explanatory figure 1 — to be provided</div>
+                <figcaption>Figure 1 · 5×5 memory neighborhood and sample transition probabilities</figcaption>
+                <img class="paper-figure" src="assets/figures/ncmc-neighborhood.png" alt="Heat map of past visits and the 5 by 5 neighborhood used to compute transition probabilities." loading="lazy">
               </figure>
               <figure class="figure-slot">
-                <figcaption>Figure 2 · <span class="ph" data-fill="paper.figure2.caption">Caption to be provided</span></figcaption>
-                <div class="figure-empty" data-fill="paper.figure2.image">Most explanatory figure 2 — to be provided</div>
+                <figcaption>Figure 2 · Logistic repulsion for different steepness values k</figcaption>
+                <img class="paper-figure" src="assets/figures/ncmc-logistic.png" alt="Six logistic curves showing how the steepness parameter controls the sharpness of the repulsion threshold." loading="lazy">
               </figure>
             </div>
           </div>
@@ -141,35 +164,57 @@
           <article class="model-card">
             <header class="model-header">
               <div>
-                <p class="model-number">Model 01</p>
+                <p class="model-number">Model 01 · NCMC research model</p>
                 <h3>Non-Markovian Random Walk</h3>
               </div>
             </header>
             <dl class="model-structure">
-              <div><dt>Question</dt><dd><span class="ph" data-fill="model.randomWalk.question">What question does this model answer? — to be provided</span></dd></div>
-              <div><dt>Assumptions</dt><dd><span class="ph" data-fill="model.randomWalk.assumptions">Assumptions — to be provided</span></dd></div>
-              <div><dt>Model</dt><dd><span class="ph" data-fill="model.randomWalk.model">Model and parameters — to be provided</span></dd></div>
-              <div><dt>Test</dt><dd><span class="ph" data-fill="model.randomWalk.test">How it was tested — to be provided</span></dd></div>
-              <div><dt>Result</dt><dd><span class="ph" data-fill="model.randomWalk.result">Result — to be provided</span></dd></div>
-              <div><dt>Limitation</dt><dd><span class="ph" data-fill="model.randomWalk.limitation">Limitation — to be provided</span></dd></div>
+              <div><dt>Question</dt><dd>How do exponentially decaying memory and Logistic repulsion alter escape time and recurrence on a two-dimensional lattice, and how does a central attractive force change the outcome?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>The walker moves on a 100×100 square lattice with an absorbing boundary and starts at the center (50,50).</li>
+                  <li>A site's memory is the maximum exponentially decaying contribution from past visits, not a sum over visits.</li>
+                  <li>Repulsion depends on the total memory in a 5×5 neighborhood and is softened with a Logistic function.</li>
+                  <li>Central attraction depends on whether a candidate move steps toward or away from the origin.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>The composite transition weight is repulsion × attraction. Baseline parameters are k = 1.5 (Logistic steepness), c = 5.5 (repulsion threshold), and λ = 0.04 (memory decay); attraction strength α is scanned from 0 to 0.5.</dd></div>
+              <div><dt>Test</dt><dd>10,000 baseline Monte Carlo simulations; 1,000 simulations per scanned parameter value; nonlinear regression of mean escape time against k, c, and λ; and a 500,000-step infinite-plane run to count returns to the origin.</dd></div>
+              <div><dt>Result</dt><dd>The pure repulsive walker escaped 100% of the time with mean 722.69 steps and median 579, well below the classical 2,500-3,000 steps. Increasing α produces a phase transition: about 2,700 steps at α = 0.2, 7,800 at 0.3, 28,000 at 0.4, and 120,000 at 0.5.</dd></div>
+              <div><dt>Limitation</dt><dd>The transience and recurrence claims are numerical rather than a rigorous proof. The results are specific to the two-dimensional square lattice, the chosen parameter ranges, and the max-based memory rule.</dd></div>
             </dl>
+            <div class="model-links">
+              <a href="assets/papers/NCMC_paper_Max_Zhang.pdf" target="_blank" rel="noopener">View full paper <span aria-hidden="true">↗</span></a>
+              <a href="#research">Research summary</a>
+            </div>
           </article>
 
           <article class="model-card">
             <header class="model-header">
               <div>
-                <p class="model-number">Model 02</p>
-                <h3>HiMCM Data-Center CO₂ Forecasting</h3>
+                <p class="model-number">Model 02 · HiMCM 2024 Problem B · Team 15260</p>
+                <h3>Carbon Footprint of High-Powered Computing</h3>
               </div>
             </header>
             <dl class="model-structure">
-              <div><dt>Question</dt><dd><span class="ph" data-fill="model.co2.question">What question does this model answer? — to be provided</span></dd></div>
-              <div><dt>Assumptions</dt><dd><span class="ph" data-fill="model.co2.assumptions">Assumptions — to be provided</span></dd></div>
-              <div><dt>Model</dt><dd><span class="ph" data-fill="model.co2.model">Model and parameters — to be provided</span></dd></div>
-              <div><dt>Test</dt><dd><span class="ph" data-fill="model.co2.test">How it was tested — to be provided</span></dd></div>
-              <div><dt>Result</dt><dd><span class="ph" data-fill="model.co2.result">Result — to be provided</span></dd></div>
-              <div><dt>Limitation</dt><dd><span class="ph" data-fill="model.co2.limitation">Limitation — to be provided</span></dd></div>
+              <div><dt>Question</dt><dd>How large is the carbon footprint of high-powered computing (HPC), how will it change by 2030, how much can renewable energy reduce it, and where should data centers be placed to balance construction cost, latency, and emissions?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>Data-center siting depends mainly on construction cost and service quality, measured by latency.</li>
+                  <li>Infrastructure carbon intensity does not fall because of technological progress during the forecast.</li>
+                  <li>HPC energy demand focuses on data centers and Bitcoin cryptocurrency mining.</li>
+                  <li>Green building materials do not reduce construction emissions in the model.</li>
+                  <li>Network-related CO₂ changes come from traffic energy demand and the local energy mix.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>Total carbon = operational + infrastructure. Operational carbon sums energy demand by source × carbon intensity; crypto energy is forecast with ARIMA, while data-center energy and the global energy mix use polynomial regression. Infrastructure carbon uses C<sub>inf</sub> = 90,035.2P. The network is modeled as a graph and optimized with integer linear programming, simulated annealing, and Dijkstra's algorithm.</dd></div>
+              <div><dt>Test</dt><dd>Forecasts were compared with historical data through 2024; the network placement model was tested on the Amazon data-center graph; the cost-latency weights m<sub>1</sub> and m<sub>2</sub> were varied; and scenarios for 100% renewable energy and government subsidies were simulated.</dd></div>
+              <div><dt>Result</dt><dd>HPC carbon emissions are predicted to reach 339.66 Mt CO₂ in 2030, up from 221.68 Mt in 2024, an increase of 117.98 Mt (53.2%). A 100% renewable scenario reduces operational carbon to less than 10% and saves $7.32 billion, but requires about 267,000 additional acres. The optimal network solution uses three connected data centers, and higher subsidies lower the carbon-emission index.</dd></div>
+              <div><dt>Limitation</dt><dd>The model assumes infrastructure emissions are unchanged by technology, excludes other HPC applications and region-specific policy, omits green-material effects, and solves the NP-hard placement problem heuristically. Forecasts over the full period carry uncertainty.</dd></div>
             </dl>
+            <div class="model-links">
+              <a href="assets/papers/HiMCM_2024.pdf" target="_blank" rel="noopener">View full HiMCM paper <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
 
           <article class="model-card">
@@ -187,6 +232,9 @@
               <div><dt>Result</dt><dd><span class="ph" data-fill="model.minecraft.result">Result — to be provided</span></dd></div>
               <div><dt>Limitation</dt><dd><span class="ph" data-fill="model.minecraft.limitation">Limitation — to be provided</span></dd></div>
             </dl>
+            <div class="model-links">
+              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Visit Minecraft archive <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
         </div>
       </div>
@@ -195,57 +243,143 @@
     <section class="section section-alt" id="problems">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">03 · Mathematical thinking in action</p>
+          <p class="section-kicker">03 · Ross application problems</p>
           <h2>Selected Problems</h2>
-          <p class="section-note">AMC/AIME problems where the process matters more than the number solved. Each entry shows my first approach, where it failed, the key insight, and a final path.</p>
+          <p class="section-note">These are the four multi-part problems from my Ross application. Each card includes every prompt and the key path from first approach to final solution.</p>
         </div>
 
         <div class="problem-list">
           <details class="problem-card" open>
             <summary>
-              <span class="problem-number">Problem 01</span>
-              <span class="problem-title ph" data-fill="problems.1.title">AMC/AIME problem title — to be provided</span>
+              <span class="problem-number">Ross 01</span>
+              <span class="problem-title">Number Wheels</span>
               <span class="problem-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="problem-body">
-              <div><h4>Problem</h4><p class="ph" data-fill="problems.1.problem">Problem statement — to be provided</p></div>
-              <div><h4>My first approach</h4><p class="ph" data-fill="problems.1.firstApproach">First approach — to be provided</p></div>
-              <div><h4>Where it failed or became inefficient</h4><p class="ph" data-fill="problems.1.failure">Where it failed or became inefficient — to be provided</p></div>
-              <div><h4>Key insight</h4><p class="ph" data-fill="problems.1.insight">Key insight — to be provided</p></div>
-              <div><h4>Final solution</h4><p class="ph" data-fill="problems.1.solution">Final solution — to be provided</p></div>
-              <div><h4>Another possible method</h4><p class="ph" data-fill="problems.1.alternative">Another possible method — to be provided</p></div>
+              <div>
+                <h4>Problem</h4>
+                <p>An n-wheel is a regular 2n-gon with a number at each vertex. It is balanced if the sum of any two adjacent numbers equals the sum of the two numbers on the opposite side of the polygon.</p>
+                <ol class="part-list">
+                  <li><strong>(a)</strong> Find all balanced 2-wheels.</li>
+                  <li><strong>(b)</strong> An n-wheel is primitive if each number equals the number on the opposite side. Verify that every primitive n-wheel is balanced.</li>
+                  <li><strong>(c)</strong> For which values of n does a non-primitive balanced n-wheel exist? Explain your reasoning.</li>
+                  <li><strong>(d)</strong> An n-wheel is classic if the 2n numbers are a rearrangement of 1, 2, 3, ..., 2n. For which n does a classic balanced n-wheel exist?</li>
+                  <li><strong>(e)</strong> Explore n-wheels further. Invent your own questions and describe the progress you can make.</li>
+                </ol>
+              </div>
+              <div><h4>My first approach</h4><p>I labeled a 2-wheel's vertices a, b, c, d in clockwise order and wrote the two balance equations a+b = c+d and b+c = d+a. Subtracting gives a = c and b = d, so I extended the same opposite-pair notation to larger wheels.</p></div>
+              <div><h4>Where it failed or became inefficient</h4><p>The direct 4-wheel construction failed: if opposite pairs differ by m, checking the edges eventually gives a+d ≠ (a+m)+(d+m). Generalizing showed that for even n the number of edges between opposite vertices is odd, so the alternating non-primitive pattern cannot close.</p></div>
+              <div><h4>Key insight</h4><p>Primitivity makes balance automatic, while a non-primitive balanced wheel requires opposite pairs to alternate around the polygon. That construction closes exactly when n is odd, so parity separates the two cases.</p></div>
+              <div>
+                <h4>Final solution</h4>
+                <ul class="solution-list">
+                  <li><strong>(a)</strong> A balanced 2-wheel has a = c and b = d; opposite vertices must be equal.</li>
+                  <li><strong>(b)</strong> If x<sub>i+n</sub> = x<sub>i</sub>, then x<sub>i</sub> + x<sub>i+1</sub> = x<sub>i+n</sub> + x<sub>i+n+1</sub>, so every primitive n-wheel is balanced.</li>
+                  <li><strong>(c)</strong> A balanced non-primitive n-wheel exists if and only if n is odd.</li>
+                  <li><strong>(d)</strong> A classic balanced n-wheel exists if and only if n is odd; n = 3 is shown in the problem, and n = 5 can be constructed with m = n = 5 and consecutive values.</li>
+                  <li><strong>(e)</strong> For a prime n-wheel, the required pairs are equivalent to infinitely many prime pairs with a fixed even gap. Zhang's bounded-gap theorem plus the pigeonhole principle guarantees such a fixed gap, proving that a balanced non-primitive prime n-wheel exists for every odd n.</li>
+                </ul>
+              </div>
+              <div><h4>Another possible method</h4><p>Encode the balance conditions as a circulant linear system and analyze rank and parity instead of constructing vertices directly. The prime extension can be treated as a bounded prime-gap problem.</p></div>
             </div>
           </details>
 
           <details class="problem-card">
             <summary>
-              <span class="problem-number">Problem 02</span>
-              <span class="problem-title ph" data-fill="problems.2.title">AMC/AIME problem title — to be provided</span>
+              <span class="problem-number">Ross 02</span>
+              <span class="problem-title">Fibonacci Fill-ins</span>
               <span class="problem-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="problem-body">
-              <div><h4>Problem</h4><p class="ph" data-fill="problems.2.problem">Problem statement — to be provided</p></div>
-              <div><h4>My first approach</h4><p class="ph" data-fill="problems.2.firstApproach">First approach — to be provided</p></div>
-              <div><h4>Where it failed or became inefficient</h4><p class="ph" data-fill="problems.2.failure">Where it failed or became inefficient — to be provided</p></div>
-              <div><h4>Key insight</h4><p class="ph" data-fill="problems.2.insight">Key insight — to be provided</p></div>
-              <div><h4>Final solution</h4><p class="ph" data-fill="problems.2.solution">Final solution — to be provided</p></div>
-              <div><h4>Another possible method</h4><p class="ph" data-fill="problems.2.alternative">Another possible method — to be provided</p></div>
+              <div>
+                <h4>Problem</h4>
+                <p>An f-sequence satisfies a<sub>n</sub> = a<sub>n-1</sub> + a<sub>n-2</sub> for n ≥ 2. The classic Fibonacci sequence has F<sub>0</sub> = 0, F<sub>1</sub> = 1.</p>
+                <ol class="part-list">
+                  <li><strong>(a)</strong> If a<sub>0</sub> and a<sub>1</sub> are given, explain why a<sub>n</sub> = F<sub>n-1</sub>a<sub>0</sub> + F<sub>n</sub>a<sub>1</sub> for every n ≥ 1.</li>
+                  <li><strong>(b)</strong> If a<sub>0</sub> = a and a<sub>4</sub> = b, determine a<sub>1</sub>, a<sub>2</sub>, and a<sub>3</sub> in terms of a and b.</li>
+                  <li><strong>(c)</strong> What property must integers a and b satisfy so that all entries of the f-sequence are integers when a<sub>0</sub> = a and a<sub>4</sub> = b?</li>
+                  <li><strong>(d)</strong> More generally, for a positive index k, what property must integers a and b satisfy to make every entry an integer when a<sub>0</sub> = a and a<sub>k</sub> = b?</li>
+                  <li><strong>(e)</strong> What other questions do Fibonacci fill-ins inspire? Make progress on those questions.</li>
+                </ol>
+              </div>
+              <div><h4>My first approach</h4><p>I proved the closed form by induction, then specialized n = 4 to solve for a<sub>1</sub>, a<sub>2</sub>, and a<sub>3</sub>, checking integrality by reducing the result modulo 3.</p></div>
+              <div><h4>Where it failed or became inefficient</h4><p>Testing divisibility term by term becomes unwieldy for a general index k. Treating a and b as arbitrary integers also misses the exact modular condition, so the n = 4 case does not scale directly.</p></div>
+              <div><h4>Key insight</h4><p>Every f-sequence is a fixed linear combination of Fibonacci numbers, so integrality is controlled by one congruence modulo F<sub>k</sub>. Matrix diagonalization then gives a closed form for the same idea beyond the classical recurrence.</p></div>
+              <div>
+                <h4>Final solution</h4>
+                <ul class="solution-list">
+                  <li><strong>(a)</strong> The formula follows by induction using the Fibonacci recurrence.</li>
+                  <li><strong>(b)</strong> a<sub>1</sub> = (b − 2a)/3, a<sub>2</sub> = (a + b)/3, and a<sub>3</sub> = (2b − a)/3.</li>
+                  <li><strong>(c)</strong> The necessary and sufficient condition is b − 2a ≡ 0 (mod 3).</li>
+                  <li><strong>(d)</strong> For general k, the condition is b ≡ F<sub>k-1</sub>a (mod F<sub>k</sub>).</li>
+                  <li><strong>(e)</strong> A generalized sequence G<sub>n</sub> = aG<sub>n-1</sub> + bG<sub>n-2</sub> has closed form G<sub>n</sub> = (λ<sub>1</sub><sup>n</sup> − λ<sub>2</sub><sup>n</sup>)/(λ<sub>1</sub> − λ<sub>2</sub>) with λ<sub>1,2</sub> = (a ± √(a² + 4b))/2, plus a variant for nonzero initial terms.</li>
+                </ul>
+              </div>
+              <div><h4>Another possible method</h4><p>Use generating functions or the Binet formula to derive the same linear representation, then obtain the modular condition from the coefficient of a<sub>1</sub>.</p></div>
             </div>
           </details>
 
           <details class="problem-card">
             <summary>
-              <span class="problem-number">Problem 03</span>
-              <span class="problem-title ph" data-fill="problems.3.title">AMC/AIME problem title — to be provided</span>
+              <span class="problem-number">Ross 03</span>
+              <span class="problem-title">Antiletters</span>
               <span class="problem-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="problem-body">
-              <div><h4>Problem</h4><p class="ph" data-fill="problems.3.problem">Problem statement — to be provided</p></div>
-              <div><h4>My first approach</h4><p class="ph" data-fill="problems.3.firstApproach">First approach — to be provided</p></div>
-              <div><h4>Where it failed or became inefficient</h4><p class="ph" data-fill="problems.3.failure">Where it failed or became inefficient — to be provided</p></div>
-              <div><h4>Key insight</h4><p class="ph" data-fill="problems.3.insight">Key insight — to be provided</p></div>
-              <div><h4>Final solution</h4><p class="ph" data-fill="problems.3.solution">Final solution — to be provided</p></div>
-              <div><h4>Another possible method</h4><p class="ph" data-fill="problems.3.alternative">Another possible method — to be provided</p></div>
+              <div>
+                <h4>Problem</h4>
+                <p>In the theory of antiletters, subwords matching a given pattern can be deleted or introduced, so different spellings can represent the same word.</p>
+                <ol class="part-list">
+                  <li><strong>(a)</strong> With letters A, B, C and deletable subwords AA, BB, CC, ABAB, BCBC, CACA, how many distinct words can be made?</li>
+                  <li><strong>(b)</strong> With letters A, B, C, D and deletable subwords AA, BB, CC, DD, ABAB, BCBC, CDCD, DADA, how many distinct words can be made?</li>
+                  <li><strong>(c)</strong> With five letters A, B, C, D, E and the analogous rules, is there a sense in which five letters produce more possible words than four letters?</li>
+                  <li><strong>(d)</strong> Invent your own patterns of deletable subwords and explore what happens.</li>
+                </ol>
+              </div>
+              <div><h4>My first approach</h4><p>I treated every deletable word as zero and derived cancellation, commutation, and reduction rules, then used those rules to enumerate equivalence classes of words for three and four letters.</p></div>
+              <div><h4>Where it failed or became inefficient</h4><p>In four letters, ACAC and BDBD no longer vanish, so the three-letter classification does not carry over. In five letters each letter has two stabilizers, so infinitely many reduced words can exist and direct enumeration stops being practical.</p></div>
+              <div><h4>Key insight</h4><p>Repeated letters are protected by stabilizers: between any two identical letters there must be a stabilizer of that letter. This turns the word problem into an algebraic structure based on cancellation, inverses, and commutation.</p></div>
+              <div>
+                <h4>Final solution</h4>
+                <ul class="solution-list">
+                  <li><strong>(a)</strong> The distinct words have representatives ABC, AB, AC, BC, A, B, and C, allowing permutations where the length is greater than one.</li>
+                  <li><strong>(b)</strong> Valid words consist of one block of repeated A/C and one block of repeated B/D; the two stable blocks can swap as a whole.</li>
+                  <li><strong>(c)</strong> Five letters produce infinitely many valid reduced words, governed by the stabilizer rule. One example is ADACDA—BDBEB—DADA.</li>
+                  <li><strong>(d)</strong> The equivalence classes form a group under concatenation and cancellation. In the order-two cyclic case, commutativity is equivalent to ABAB = BABA = e; for order n, the converse fails in general, with the dihedral group D<sub>8</sub> providing a counterexample.</li>
+                </ul>
+              </div>
+              <div><h4>Another possible method</h4><p>Describe the reductions with a string-rewriting system or finite-state automaton, then use group presentations and canonical forms to classify the equivalence classes.</p></div>
+            </div>
+          </details>
+
+          <details class="problem-card">
+            <summary>
+              <span class="problem-number">Ross 04</span>
+              <span class="problem-title">Hilbert Numbers</span>
+              <span class="problem-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="problem-body">
+              <div>
+                <h4>Problem</h4>
+                <p>Hilbert numbers are integers of the form 4k + 1. A Hilbert number is prime if it is larger than 1 and not a product of two smaller Hilbert numbers. More generally, the m-Hilbert numbers are integers of the form mk + 1, with m-Hilbert primes defined analogously.</p>
+                <ol class="part-list">
+                  <li><strong>(a)</strong> For which values of m do the m-Hilbert integers factor uniquely into m-Hilbert primes?</li>
+                  <li><strong>(b)</strong> Can you describe a sense in which the 4-Hilbert numbers are closer to unique factorization than the 5-Hilbert numbers? Is there an m with even worse factorization than m = 5?</li>
+                  <li><strong>(c)</strong> What variations on these questions might you ask? Share some of your progress.</li>
+                </ol>
+              </div>
+              <div><h4>My first approach</h4><p>I started from the fundamental theorem of arithmetic, listed the first few m-Hilbert numbers, searched for composite m-Hilbert numbers, and looked for different factorizations into m-Hilbert primes.</p></div>
+              <div><h4>Where it failed or became inefficient</h4><p>No general method emerges for finding the smallest counterexample because m-Hilbert primes are irregular and depend on the distribution of ordinary primes. Each m therefore tends to require individual calculation.</p></div>
+              <div><h4>Key insight</h4><p>If several primes are all congruent to −1 modulo m, then products of pairs are congruent to 1 modulo m and can create multiple factorizations. For every m ≥ 3, the identity (m−1)²(2m−1)² = [(m−1)(2m−1)]² produces a counterexample to unique factorization.</p></div>
+              <div>
+                <h4>Final solution</h4>
+                <ul class="solution-list">
+                  <li><strong>(a)</strong> Unique factorization holds for m = 1 and m = 2, but fails for every m ≥ 3.</li>
+                  <li><strong>(b)</strong> The smallest 4-Hilbert counterexample is 441 = 9·49 = 21², while the smallest 5-Hilbert counterexample is 336 = 6·56 = 16·21. Thus m = 4 is closer to unique factorization than m = 5. Since 100 = 4·25 = 10² is the smallest 3-Hilbert counterexample, m = 3 is worse than m = 5 and all m ≥ 4.</li>
+                  <li><strong>(c)</strong> Generalizing to S<sub>m,a</sub> = {mk + a} requires m | a(a−1) for closure, forcing a = 1 when a &lt; m. Choosing 2k primes with a common residue element of order k gives ½·C(2k,k) distinct factorizations; for m = 7, r = 2 and the primes 2, 23, 37, 79, 107, 149 give 10 factorizations.</li>
+                </ul>
+              </div>
+              <div><h4>Another possible method</h4><p>Use modular arithmetic and finite group theory to construct factorizations systematically, or search computationally over residue classes when only a specific m is required.</p></div>
             </div>
           </details>
         </div>

@@ -3,11 +3,24 @@
 A personal portfolio site for **Max Xuming Zhang**, built as a lightweight,
 dependency-free static website ready to publish on GitHub Pages.
 
-The page is assembled from the guidelines in `Max_additional_information.pdf`:
-research paper spotlight, models and simulations, selected AMC/AIME problems, a
-short mathematical self-position, and links to supplementary GitHub projects.
-Content that was not provided in the guidelines is intentionally marked as a
-placeholder so it can be filled in later.
+The page is assembled from the guidelines in `Max_additional_information.pdf`
+and expanded with the supplied NCMC paper, HiMCM 2024 solution, and Ross
+application problems. Content that has not been supplied is intentionally
+marked as a placeholder.
+
+## Current content
+
+- **Research Paper:** the full NCMC 2026 paper, "Memory, Repulsion, and
+  Attraction: Phase Transitions in Non-Markovian Random Walks on a
+  Two-Dimensional Lattice," with a summary, key findings, and two extracted
+  figures.
+- **Models and Simulations:** populated model cards for the non-Markovian
+  random walk and the HiMCM 2024 high-powered computing carbon-footprint model.
+  The Minecraft resource-system card remains the only model placeholder.
+- **Selected Problems:** all four multi-part Ross application problems:
+  Number Wheels, Fibonacci Fill-ins, Antiletters, and Hilbert Numbers.
+- **Supplementary materials:** linked project pages for the Thought
+  Constellation, Club Matching, and Minecraft archive.
 
 ## What is included
 
@@ -15,6 +28,8 @@ placeholder so it can be filled in later.
 - `assets/css/styles.css` - all styling (responsive, no frameworks).
 - `assets/js/main.js` - small enhancements only (word counts, details
   accessibility). The page works without it.
+- `assets/papers/` - the complete NCMC paper and HiMCM 2024 solution PDFs.
+- `assets/figures/` - figures extracted from the NCMC paper.
 - `PLACEHOLDERS.md` - checklist of every text, image, and link waiting for
   real content.
 - `.github/workflows/pages.yml` - automatic deployment to GitHub Pages.
@@ -32,19 +47,13 @@ Then visit `http://localhost:8000`.
 
 ## Filling in placeholders
 
-Unfinished content is shown with a light yellow, dashed-outlined style, e.g.
-`Paper title - to be provided`. Replace the text directly in `index.html`.
-For the most reliable handoff, first send the missing material and this
-repository can be updated centrally instead of editing each label by hand.
+Unfinished content is shown with a light yellow, dashed-outlined style. At this
+point the remaining text placeholders are all in the Minecraft resource-system
+model card.
 
-Two details are worth changing while adding real content:
-
-1. The header and footer currently link to `https://github.com/aeroptot`,
-   inferred from the other project URLs in the brief. Confirm or replace with
-   the intended GitHub account or repository link.
-2. The two disabled **View Full Paper** / **View Code** buttons need to be
-   replaced with real `<a>` links once the paper PDF and code repository
-   locations exist.
+The header and footer currently link to `https://github.com/aeroptot`, inferred
+from the project URLs in the brief. Confirm or replace this with the intended
+GitHub account or repository link.
 
 See [PLACEHOLDERS.md](PLACEHOLDERS.md) for the full checklist.
 
@@ -85,7 +94,9 @@ fully relative-path friendly, so it also works at the repository root.
 ├── 404.html
 ├── assets/
 │   ├── css/styles.css
-│   └── js/main.js
+│   ├── figures/
+│   ├── js/main.js
+│   └── papers/
 ├── .github/workflows/pages.yml
 ├── README.md
 └── PLACEHOLDERS.md
