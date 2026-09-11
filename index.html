@@ -43,14 +43,14 @@
         <div class="module-grid" aria-label="Portfolio sections">
           <a class="module-card" href="#research">
             <span class="module-index">01</span>
-            <span class="module-title">Research Paper</span>
-            <span class="module-copy">Pinned summary of a 19-page paper on non-Markovian random walks, with simulation and sensitivity findings.</span>
+            <span class="module-title">Research Papers</span>
+            <span class="module-copy">In-depth summaries of my NCMC random-walk paper and HiMCM carbon-footprint model, each with the full PDF and model-level findings.</span>
             <span class="module-arrow" aria-hidden="true">→</span>
           </a>
           <a class="module-card" href="#models">
             <span class="module-index">02</span>
             <span class="module-title">Models &amp; Simulations</span>
-            <span class="module-copy">Completed models shown through Question → Assumptions → Model → Test → Result → Limitation.</span>
+            <span class="module-copy">A completed Minecraft resource-system model, shown through Question → Assumptions → Model → Test → Result → Limitation.</span>
             <span class="module-arrow" aria-hidden="true">→</span>
           </a>
           <a class="module-card" href="#problems">
@@ -73,11 +73,12 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">01 · Pinned research</p>
-          <h2>Research Paper</h2>
-          <p class="section-note">A summary of the 19-page NCMC 2026 paper, with the full PDF and code appendix available separately.</p>
+          <h2>Research Papers</h2>
+          <p class="section-note">Each paper is presented both as a research summary and as a compact model card, with its full PDF available separately.</p>
         </div>
 
-        <article class="paper-card">
+        <div class="paper-stack">
+        <article class="paper-card" id="ncmc-paper">
           <div class="paper-title-row">
             <div>
               <p class="paper-meta">NCMC 2026 · Max Zhang · 19 pages</p>
@@ -148,7 +149,121 @@
               </figure>
             </div>
           </div>
+
+          <div class="paper-summary" id="ncmc-model-summary">
+            <p class="paper-summary-label">Research-to-model summary</p>
+            <dl class="model-structure paper-model-structure">
+              <div><dt>Question</dt><dd>How do decaying memory and Logistic repulsion alter escape time and recurrence on a two-dimensional lattice, and how does a central attraction change the outcome?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>The walker moves on a 100×100 square lattice with an absorbing boundary and starts at (50,50).</li>
+                  <li>A site's memory is the maximum exponentially decaying contribution from its past visits.</li>
+                  <li>Repulsion depends on total memory in a 5×5 neighborhood and is softened with a Logistic function.</li>
+                  <li>Central attraction depends on whether a move steps toward or away from the origin.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>Composite transition weight = repulsion × attraction. Baseline parameters are k = 1.5, c = 5.5, and λ = 0.04; attraction strength α is scanned from 0 to 0.5.</dd></div>
+              <div><dt>Test</dt><dd>10,000 baseline simulations; 1,000 simulations per scanned parameter value; nonlinear regression against k, c, and λ; and a 500,000-step infinite-plane run to count returns to the origin.</dd></div>
+              <div><dt>Result</dt><dd>Pure repulsion escaped 100% of the time with mean 722.69 steps and median 579, well below the classical 2,500-3,000 steps. Increasing α drives a phase transition: about 2,700 steps at α = 0.2, 7,800 at 0.3, 28,000 at 0.4, and 120,000 at 0.5.</dd></div>
+              <div><dt>Limitation</dt><dd>The recurrence and transience claims are numerical rather than rigorous proofs, and the findings are specific to the 2D square lattice, parameter ranges, and max-based memory rule.</dd></div>
+            </dl>
+          </div>
         </article>
+
+        <article class="paper-card" id="himcm-paper">
+          <div class="paper-title-row">
+            <div>
+              <p class="paper-meta">HiMCM 2024 · Problem B · Team 15260 · 25 pages</p>
+              <h3>Carbon Footprint of High-Powered Computing: Forecasting, Renewable Transitions, and Network Design</h3>
+            </div>
+            <span class="status-chip">Competition model</span>
+          </div>
+
+          <ul class="method-list" aria-label="Methods used">
+            <li>ARIMA forecasting</li>
+            <li>Polynomial regression</li>
+            <li>Carbon-intensity accounting</li>
+            <li>Integer linear programming</li>
+            <li>Simulated annealing</li>
+            <li>Dijkstra routing</li>
+          </ul>
+
+          <div class="paper-grid">
+            <div class="paper-body">
+              <h4>Abstract</h4>
+              <p>
+                HiMCM 2024 Problem B asked teams to quantify the environmental impact of high-powered
+                computing and propose practical mitigation strategies. This solution models total carbon
+                as operational plus infrastructure emissions. It forecasts data-center and Bitcoin energy
+                demand from historical data, combines energy demand with source-specific carbon intensity,
+                estimates construction emissions, and predicts 339.66 Mt CO₂ by 2030, up from 221.68 Mt
+                in 2024. A 100% renewable scenario cuts operational carbon to under 10% and saves $7.32
+                billion, but adds about 267,000 acres of land use. The team also optimizes data-center
+                placement with integer linear programming and simulated annealing, showing that three
+                connected data centers balance cost and latency while government subsidies reduce the
+                modeled carbon-emission index.
+              </p>
+
+              <h4>Core research question</h4>
+              <p>
+                How can we estimate the current and future carbon footprint of high-powered computing,
+                quantify the effects of renewable-energy adoption, and choose data-center and network
+                designs that reduce emissions without ignoring cost, latency, or land use?
+              </p>
+              <ol class="question-list">
+                <li>Estimate HPC carbon emissions across different energy sources and energy mixes.</li>
+                <li>Forecast how HPC energy use and emissions evolve by 2030.</li>
+                <li>Quantify the emissions, land, and cost effects of a full renewable-energy transition.</li>
+                <li>Design a scalable network architecture and optimize data-center placement.</li>
+                <li>Develop practical recommendations and test one strategy in detail.</li>
+              </ol>
+
+              <h4>Main findings</h4>
+              <ul class="finding-list">
+                <li><strong>2030 emissions rise sharply.</strong> Predicted HPC emissions reach 339.66 Mt CO₂ in 2030, compared with 221.68 Mt in 2024: an increase of 117.98 Mt, or 53.2%.</li>
+                <li><strong>Renewables help operations, not infrastructure.</strong> A 100% renewable scenario lowers operational carbon to under 10% and saves $7.32 billion, but increases land use by roughly 267,000 acres and leaves infrastructure emissions unchanged.</li>
+                <li><strong>Network design and subsidies matter.</strong> The optimal placement solution uses three connected data centers to balance cost and latency, and increasing government subsidies steadily lowers the modeled carbon-emission index.</li>
+              </ul>
+
+              <div class="button-row">
+                <a class="btn btn-primary" href="assets/papers/HiMCM_2024.pdf" target="_blank" rel="noopener">View Full Paper</a>
+                <a class="btn" href="#himcm-model-summary">View Model Summary</a>
+              </div>
+            </div>
+
+            <div class="paper-figures">
+              <figure class="figure-slot">
+                <figcaption>Figure 1 · Predicted HPC carbon-footprint growth through 2030</figcaption>
+                <img class="paper-figure" src="assets/figures/himcm-carbon-footprint.png" alt="Chart showing operational and infrastructure carbon emissions rising through 2030." loading="lazy">
+              </figure>
+              <figure class="figure-slot">
+                <figcaption>Figure 2 · Carbon-emission index versus the portion of government subsidies</figcaption>
+                <img class="paper-figure" src="assets/figures/himcm-subsidies.png" alt="Chart showing the normalized carbon-emission index falling as government subsidies increase." loading="lazy">
+              </figure>
+            </div>
+          </div>
+
+          <div class="paper-summary" id="himcm-model-summary">
+            <p class="paper-summary-label">Research-to-model summary</p>
+            <dl class="model-structure paper-model-structure">
+              <div><dt>Question</dt><dd>How large is the carbon footprint of high-powered computing, how will it change by 2030, how much can renewable energy reduce it, and where should data centers be placed to balance construction cost, latency, and emissions?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>Data-center siting depends mainly on construction cost and latency.</li>
+                  <li>Infrastructure carbon intensity does not fall because of technological progress during the forecast.</li>
+                  <li>HPC energy demand focuses on data centers and Bitcoin cryptocurrency mining.</li>
+                  <li>Green building materials do not reduce construction emissions in the model.</li>
+                  <li>Network-related CO₂ changes come from traffic energy demand and the local energy mix.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>Total carbon = operational + infrastructure. Operational carbon sums energy demand by source × carbon intensity; ARIMA forecasts crypto energy, while polynomial regression forecasts data-center energy and the global energy mix. Infrastructure carbon uses C<sub>inf</sub> = 90,035.2P. The network uses integer linear programming, simulated annealing, and Dijkstra routing.</dd></div>
+              <div><dt>Test</dt><dd>Forecasts were compared with historical data through 2024; network placement was tested on the Amazon data-center graph; the cost-latency weights m<sub>1</sub> and m<sub>2</sub> were varied; and renewable-energy and subsidy scenarios were simulated.</dd></div>
+              <div><dt>Result</dt><dd>Emissions reach 339.66 Mt CO₂ in 2030, up 117.98 Mt from 2024. Full renewables cut operational carbon to under 10% and save $7.32 billion while adding about 267,000 acres of land use. The best network solution uses three connected data centers, and larger subsidies lower the carbon-emission index.</dd></div>
+              <div><dt>Limitation</dt><dd>The model assumes infrastructure emissions are unchanged by technology, excludes other HPC applications and region-specific policy, omits green-material effects, and solves the NP-hard placement problem heuristically. Long-range forecasts carry uncertainty.</dd></div>
+            </dl>
+          </div>
+        </article>
+        </div>
       </div>
     </section>
 
@@ -157,83 +272,50 @@
         <div class="section-heading">
           <p class="section-kicker">02 · Completed work</p>
           <h2>Models &amp; Simulations</h2>
-          <p class="section-note">Each project follows the same structure: Question → Assumptions → Model → Test → Result → Limitation.</p>
+          <p class="section-note">One completed systems model from the Minecraft archive, shown through Question → Assumptions → Model → Test → Result → Limitation.</p>
         </div>
 
         <div class="model-list">
           <article class="model-card">
             <header class="model-header">
               <div>
-                <p class="model-number">Model 01 · NCMC research model</p>
-                <h3>Non-Markovian Random Walk</h3>
-              </div>
-            </header>
-            <dl class="model-structure">
-              <div><dt>Question</dt><dd>How do exponentially decaying memory and Logistic repulsion alter escape time and recurrence on a two-dimensional lattice, and how does a central attractive force change the outcome?</dd></div>
-              <div><dt>Assumptions</dt><dd>
-                <ul class="detail-list">
-                  <li>The walker moves on a 100×100 square lattice with an absorbing boundary and starts at the center (50,50).</li>
-                  <li>A site's memory is the maximum exponentially decaying contribution from past visits, not a sum over visits.</li>
-                  <li>Repulsion depends on the total memory in a 5×5 neighborhood and is softened with a Logistic function.</li>
-                  <li>Central attraction depends on whether a candidate move steps toward or away from the origin.</li>
-                </ul>
-              </dd></div>
-              <div><dt>Model</dt><dd>The composite transition weight is repulsion × attraction. Baseline parameters are k = 1.5 (Logistic steepness), c = 5.5 (repulsion threshold), and λ = 0.04 (memory decay); attraction strength α is scanned from 0 to 0.5.</dd></div>
-              <div><dt>Test</dt><dd>10,000 baseline Monte Carlo simulations; 1,000 simulations per scanned parameter value; nonlinear regression of mean escape time against k, c, and λ; and a 500,000-step infinite-plane run to count returns to the origin.</dd></div>
-              <div><dt>Result</dt><dd>The pure repulsive walker escaped 100% of the time with mean 722.69 steps and median 579, well below the classical 2,500-3,000 steps. Increasing α produces a phase transition: about 2,700 steps at α = 0.2, 7,800 at 0.3, 28,000 at 0.4, and 120,000 at 0.5.</dd></div>
-              <div><dt>Limitation</dt><dd>The transience and recurrence claims are numerical rather than a rigorous proof. The results are specific to the two-dimensional square lattice, the chosen parameter ranges, and the max-based memory rule.</dd></div>
-            </dl>
-            <div class="model-links">
-              <a href="assets/papers/NCMC_paper_Max_Zhang.pdf" target="_blank" rel="noopener">View full paper <span aria-hidden="true">↗</span></a>
-              <a href="#research">Research summary</a>
-            </div>
-          </article>
-
-          <article class="model-card">
-            <header class="model-header">
-              <div>
-                <p class="model-number">Model 02 · HiMCM 2024 Problem B · Team 15260</p>
-                <h3>Carbon Footprint of High-Powered Computing</h3>
-              </div>
-            </header>
-            <dl class="model-structure">
-              <div><dt>Question</dt><dd>How large is the carbon footprint of high-powered computing (HPC), how will it change by 2030, how much can renewable energy reduce it, and where should data centers be placed to balance construction cost, latency, and emissions?</dd></div>
-              <div><dt>Assumptions</dt><dd>
-                <ul class="detail-list">
-                  <li>Data-center siting depends mainly on construction cost and service quality, measured by latency.</li>
-                  <li>Infrastructure carbon intensity does not fall because of technological progress during the forecast.</li>
-                  <li>HPC energy demand focuses on data centers and Bitcoin cryptocurrency mining.</li>
-                  <li>Green building materials do not reduce construction emissions in the model.</li>
-                  <li>Network-related CO₂ changes come from traffic energy demand and the local energy mix.</li>
-                </ul>
-              </dd></div>
-              <div><dt>Model</dt><dd>Total carbon = operational + infrastructure. Operational carbon sums energy demand by source × carbon intensity; crypto energy is forecast with ARIMA, while data-center energy and the global energy mix use polynomial regression. Infrastructure carbon uses C<sub>inf</sub> = 90,035.2P. The network is modeled as a graph and optimized with integer linear programming, simulated annealing, and Dijkstra's algorithm.</dd></div>
-              <div><dt>Test</dt><dd>Forecasts were compared with historical data through 2024; the network placement model was tested on the Amazon data-center graph; the cost-latency weights m<sub>1</sub> and m<sub>2</sub> were varied; and scenarios for 100% renewable energy and government subsidies were simulated.</dd></div>
-              <div><dt>Result</dt><dd>HPC carbon emissions are predicted to reach 339.66 Mt CO₂ in 2030, up from 221.68 Mt in 2024, an increase of 117.98 Mt (53.2%). A 100% renewable scenario reduces operational carbon to less than 10% and saves $7.32 billion, but requires about 267,000 additional acres. The optimal network solution uses three connected data centers, and higher subsidies lower the carbon-emission index.</dd></div>
-              <div><dt>Limitation</dt><dd>The model assumes infrastructure emissions are unchanged by technology, excludes other HPC applications and region-specific policy, omits green-material effects, and solves the NP-hard placement problem heuristically. Forecasts over the full period carry uncertainty.</dd></div>
-            </dl>
-            <div class="model-links">
-              <a href="assets/papers/HiMCM_2024.pdf" target="_blank" rel="noopener">View full HiMCM paper <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="model-card">
-            <header class="model-header">
-              <div>
-                <p class="model-number">Model 03</p>
+                <p class="model-number">Model 01 · Minecraft systems archive</p>
                 <h3>Minecraft Resource-System Model</h3>
               </div>
             </header>
             <dl class="model-structure">
-              <div><dt>Question</dt><dd><span class="ph" data-fill="model.minecraft.question">What question does this model answer? — to be provided</span></dd></div>
-              <div><dt>Assumptions</dt><dd><span class="ph" data-fill="model.minecraft.assumptions">Assumptions — to be provided</span></dd></div>
-              <div><dt>Model</dt><dd><span class="ph" data-fill="model.minecraft.model">Model and parameters — to be provided</span></dd></div>
-              <div><dt>Test</dt><dd><span class="ph" data-fill="model.minecraft.test">How it was tested — to be provided</span></dd></div>
-              <div><dt>Result</dt><dd><span class="ph" data-fill="model.minecraft.result">Result — to be provided</span></dd></div>
-              <div><dt>Limitation</dt><dd><span class="ph" data-fill="model.minecraft.limitation">Limitation — to be provided</span></dd></div>
+              <div><dt>Question</dt><dd>How can long-running Minecraft production systems be designed, tested, and optimized as resource-processing networks of inputs, processes, bottlenecks, and outputs?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>Each machine operates inside a live single-player survival world and is limited by game rules such as mob caps, spawning radii, entity collisions, and player loading.</li>
+                  <li>Performance is judged by measurable throughput, reliability, lag, build complexity, and ease of maintenance.</li>
+                  <li>Optimization is iterative: build, observe an inefficiency, form a hypothesis, implement a change, and compare the result.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>Every system is documented as Input → Process → Output, with crucial variables, observed inefficiencies, an optimization hypothesis, implementation changes, results, and reflection. Individual machines are then connected into larger resource, storage, and sorting networks.</dd></div>
+              <div><dt>Test</dt><dd>Machines were built and measured directly in the live world. Designs were revised in response to entity lag, mob-spawn failures, unsafe items entering the system, sorting bottlenecks, and player-loading limits. Version-specific mechanics were checked against observed behavior rather than assumed from the blueprint.</dd></div>
+              <div>
+                <dt>Result</dt>
+                <dd>
+                  Two results show the range of the archive:
+                  <div class="result-highlights">
+                    <div class="result-highlight">
+                      <p class="result-value">432k/h</p>
+                      <p>The end-portal sand duper and bulk-collection system produces 432,000 sand or concrete-powder items per hour, compacts them into shulker boxes, and sends those boxes into long-term chest storage.</p>
+                    </div>
+                    <div class="result-highlight">
+                      <p class="result-value">Trial Chamber</p>
+                      <p>The automated Trial Chamber system interlinks spawner activation, player transport, vault-key timing, crafting, normal sorting, and unstackable-item sorting into one continuous loot system.</p>
+                    </div>
+                  </div>
+                </dd>
+              </div>
+              <div><dt>Limitation</dt><dd>Some systems depend on version-specific game mechanics and can be difficult to repair. Trial Chamber throughput remains limited by the number of available players and the game's mob cap, while large farms can still create lag or lose yield at entity limits.</dd></div>
             </dl>
             <div class="model-links">
-              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Visit Minecraft archive <span aria-hidden="true">↗</span></a>
+              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Visit full Minecraft archive <span aria-hidden="true">↗</span></a>
+              <a href="https://aeroptot.github.io/Minecraft-records/articles/Sand%20duper/" target="_blank" rel="noopener">Sand duper write-up</a>
+              <a href="https://aeroptot.github.io/Minecraft-records/articles/Trial%20farm/" target="_blank" rel="noopener">Trial Chamber write-up</a>
             </div>
           </article>
         </div>

@@ -1,20 +1,14 @@
-# Placeholder checklist
+# Content status
 
-The supplied NCMC paper, HiMCM 2024 solution, and Ross application problems are
-now incorporated. Only the following content still needs to be filled in.
+All requested content is now incorporated:
 
-## Minecraft Resource-System Model
+- NCMC 2026 research paper summary and model breakdown.
+- HiMCM 2024 research summary and model breakdown.
+- All four Ross application problems and their 17 subquestions.
+- Minecraft resource-system model with the 432k/h sand duper and automated
+  Trial Chamber results.
 
-The existing model card still needs these six parts:
-
-1. Question
-2. Assumptions
-3. Model
-4. Test
-5. Result
-6. Limitation
-
-The Minecraft archive is already linked from the card.
+No text or image placeholders remain.
 
 ## Optional refinements
 
@@ -22,5 +16,5 @@ The Minecraft archive is already linked from the card.
   `https://github.com/aeroptot` or another account/repository.
 - Replace the "How I Think Mathematically" example statement if a final version
   is provided. It currently runs 88 words and updates its count automatically.
-- Add a repository or paper link beside the NCMC "View Code Appendix" if the
-  code is later published separately.
+- Add a repository link beside the NCMC "View Code Appendix" if the code is
+  later published separately.

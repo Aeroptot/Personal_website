@@ -4,19 +4,19 @@ A personal portfolio site for **Max Xuming Zhang**, built as a lightweight,
 dependency-free static website ready to publish on GitHub Pages.
 
 The page is assembled from the guidelines in `Max_additional_information.pdf`
-and expanded with the supplied NCMC paper, HiMCM 2024 solution, and Ross
-application problems. Content that has not been supplied is intentionally
-marked as a placeholder.
+and expanded with the supplied NCMC paper, HiMCM 2024 solution, Ross
+application problems, and Minecraft systems archive.
 
 ## Current content
 
-- **Research Paper:** the full NCMC 2026 paper, "Memory, Repulsion, and
-  Attraction: Phase Transitions in Non-Markovian Random Walks on a
-  Two-Dimensional Lattice," with a summary, key findings, and two extracted
-  figures.
-- **Models and Simulations:** populated model cards for the non-Markovian
-  random walk and the HiMCM 2024 high-powered computing carbon-footprint model.
-  The Minecraft resource-system card remains the only model placeholder.
+- **Research Papers:** full research summaries for the NCMC 2026 paper,
+  "Memory, Repulsion, and Attraction," and the HiMCM 2024 high-powered
+  computing model. Each paper also includes a six-part model summary
+  (Question, Assumptions, Model, Test, Result, Limitation), two figures, and a
+  link to the complete PDF.
+- **Models and Simulations:** a single Minecraft resource-system model drawing
+  on the public Minecraft archive, with two highlighted results: the 432k/h
+  sand duper and the automated Trial Chamber system.
 - **Selected Problems:** all four multi-part Ross application problems:
   Number Wheels, Fibonacci Fill-ins, Antiletters, and Hilbert Numbers.
 - **Supplementary materials:** linked project pages for the Thought
@@ -29,9 +29,8 @@ marked as a placeholder.
 - `assets/js/main.js` - small enhancements only (word counts, details
   accessibility). The page works without it.
 - `assets/papers/` - the complete NCMC paper and HiMCM 2024 solution PDFs.
-- `assets/figures/` - figures extracted from the NCMC paper.
-- `PLACEHOLDERS.md` - checklist of every text, image, and link waiting for
-  real content.
+- `assets/figures/` - figures extracted from the NCMC and HiMCM papers.
+- `PLACEHOLDERS.md` - content-status checklist and optional future refinements.
 - `.github/workflows/pages.yml` - automatic deployment to GitHub Pages.
 
 ## Preview locally
@@ -45,17 +44,15 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## Filling in placeholders
+## Content status
 
-Unfinished content is shown with a light yellow, dashed-outlined style. At this
-point the remaining text placeholders are all in the Minecraft resource-system
-model card.
+All requested research, modeling, problem-solving, and Minecraft content is now
+populated; no text or image placeholders remain. The header and footer link to
+`https://github.com/aeroptot`, inferred from the project URLs in the brief.
+Confirm or replace this with the intended GitHub account or repository link if
+needed.
 
-The header and footer currently link to `https://github.com/aeroptot`, inferred
-from the project URLs in the brief. Confirm or replace this with the intended
-GitHub account or repository link.
-
-See [PLACEHOLDERS.md](PLACEHOLDERS.md) for the full checklist.
+See [PLACEHOLDERS.md](PLACEHOLDERS.md) for the full content-status checklist.
 
 ## Publish on GitHub
 

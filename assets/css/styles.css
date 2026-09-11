@@ -346,6 +346,11 @@ h4 {
   box-shadow: 0 24px 60px -44px rgba(27, 31, 39, 0.55);
 }
 
+.paper-stack {
+  display: grid;
+  gap: 2rem;
+}
+
 .paper-title-row {
   display: flex;
   align-items: flex-start;
@@ -535,6 +540,30 @@ h4 {
   box-shadow: 0 18px 40px -34px rgba(27, 31, 39, 0.55);
 }
 
+.paper-summary {
+  margin-top: 3rem;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.paper-summary-label {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: #faf9f5;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.paper-model-structure > div {
+  grid-template-columns: 170px minmax(0, 1fr);
+}
+
 /* Models */
 
 .model-list {
@@ -615,6 +644,34 @@ h4 {
 .model-links a:focus-visible {
   color: var(--accent);
   border-color: currentColor;
+}
+
+.result-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.result-highlight {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #faf9f5;
+}
+
+.result-value {
+  margin: 0 0 0.35rem;
+  color: var(--accent-dark);
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.result-highlight p:not(.result-value) {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 /* Problems */
@@ -729,8 +786,8 @@ h4 {
 
 .think-quote p {
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.7vw, 2.05rem);
-  line-height: 1.62;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.65;
   color: #ffffff;
 }
 
@@ -908,6 +965,10 @@ h4 {
 
   .think-quote {
     padding-left: 1.4rem;
+  }
+
+  .result-highlights {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
