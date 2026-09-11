@@ -14,9 +14,10 @@ application problems, and Minecraft systems archive.
   computing model. Each paper also includes a six-part model summary
   (Question, Assumptions, Model, Test, Result, Limitation), two figures, and a
   link to the complete PDF.
-- **Models and Simulations:** a single Minecraft resource-system model drawing
-  on the public Minecraft archive, with two highlighted results: the 432k/h
-  sand duper and the automated Trial Chamber system.
+- **Models and Simulations:** two Minecraft machine write-ups drawn from the
+  public archive: the 432k/h sand duper and the automated Trial Chamber system.
+  Each has its own Question → Assumptions → Model → Test → Result → Limitation
+  breakdown and a link to its flowchart.
 - **Selected Problems:** all four multi-part Ross application problems:
   Number Wheels, Fibonacci Fill-ins, Antiletters, and Hilbert Numbers.
 - **Supplementary materials:** linked project pages for the Thought

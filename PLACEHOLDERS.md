@@ -5,8 +5,8 @@ All requested content is now incorporated:
 - NCMC 2026 research paper summary and model breakdown.
 - HiMCM 2024 research summary and model breakdown.
 - All four Ross application problems and their 17 subquestions.
-- Minecraft resource-system model with the 432k/h sand duper and automated
-  Trial Chamber results.
+- Minecraft machine cards for the 432k/h sand duper and automated Trial Chamber
+  system, including their flowcharts.
 
 No text or image placeholders remain.
 

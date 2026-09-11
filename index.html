@@ -50,7 +50,7 @@
           <a class="module-card" href="#models">
             <span class="module-index">02</span>
             <span class="module-title">Models &amp; Simulations</span>
-            <span class="module-copy">A completed Minecraft resource-system model, shown through Question → Assumptions → Model → Test → Result → Limitation.</span>
+            <span class="module-copy">Two completed Minecraft machines, each shown through Question → Assumptions → Model → Test → Result → Limitation.</span>
             <span class="module-arrow" aria-hidden="true">→</span>
           </a>
           <a class="module-card" href="#problems">
@@ -272,50 +272,65 @@
         <div class="section-heading">
           <p class="section-kicker">02 · Completed work</p>
           <h2>Models &amp; Simulations</h2>
-          <p class="section-note">One completed systems model from the Minecraft archive, shown through Question → Assumptions → Model → Test → Result → Limitation.</p>
+          <p class="section-note">Two completed Minecraft machine systems, each shown through Question → Assumptions → Model → Test → Result → Limitation.</p>
         </div>
 
         <div class="model-list">
           <article class="model-card">
             <header class="model-header">
               <div>
-                <p class="model-number">Model 01 · Minecraft systems archive</p>
-                <h3>Minecraft Resource-System Model</h3>
+                <p class="model-number">Model 01 · Resource production</p>
+                <h3>432k/h End-Portal Sand Duper with Bulk Collection</h3>
               </div>
             </header>
             <dl class="model-structure">
-              <div><dt>Question</dt><dd>How can long-running Minecraft production systems be designed, tested, and optimized as resource-processing networks of inputs, processes, bottlenecks, and outputs?</dd></div>
+              <div><dt>Question</dt><dd>How can sand or concrete powder be duplicated continuously through the End portal and collected into a dense, long-term storage system?</dd></div>
               <div><dt>Assumptions</dt><dd>
                 <ul class="detail-list">
-                  <li>Each machine operates inside a live single-player survival world and is limited by game rules such as mob caps, spawning radii, entity collisions, and player loading.</li>
-                  <li>Performance is judged by measurable throughput, reliability, lag, build complexity, and ease of maintenance.</li>
-                  <li>Optimization is iterative: build, observe an inefficiency, form a hypothesis, implement a change, and compare the result.</li>
+                  <li>A controlled in-water explosion can power a TNT duper without destroying the machine.</li>
+                  <li>Pistons can push sand into the End portal while duplicating another sand block at the original position.</li>
+                  <li>Hopper minecarts can collect material from the 5×5 obsidian platform in the End.</li>
+                  <li>Placing filled shulker boxes into ordinary chests creates much denser long-term storage.</li>
                 </ul>
               </dd></div>
-              <div><dt>Model</dt><dd>Every system is documented as Input → Process → Output, with crucial variables, observed inefficiencies, an optimization hypothesis, implementation changes, results, and reflection. Individual machines are then connected into larger resource, storage, and sorting networks.</dd></div>
-              <div><dt>Test</dt><dd>Machines were built and measured directly in the live world. Designs were revised in response to entity lag, mob-spawn failures, unsafe items entering the system, sorting bottlenecks, and player-loading limits. Version-specific mechanics were checked against observed behavior rather than assumed from the blueprint.</dd></div>
-              <div>
-                <dt>Result</dt>
-                <dd>
-                  Two results show the range of the archive:
-                  <div class="result-highlights">
-                    <div class="result-highlight">
-                      <p class="result-value">432k/h</p>
-                      <p>The end-portal sand duper and bulk-collection system produces 432,000 sand or concrete-powder items per hour, compacts them into shulker boxes, and sends those boxes into long-term chest storage.</p>
-                    </div>
-                    <div class="result-highlight">
-                      <p class="result-value">Trial Chamber</p>
-                      <p>The automated Trial Chamber system interlinks spawner activation, player transport, vault-key timing, crafting, normal sorting, and unstackable-item sorting into one continuous loot system.</p>
-                    </div>
-                  </div>
-                </dd>
-              </div>
-              <div><dt>Limitation</dt><dd>Some systems depend on version-specific game mechanics and can be difficult to repair. Trial Chamber throughput remains limited by the number of available players and the game's mob cap, while large farms can still create lag or lose yield at entity limits.</dd></div>
+              <div><dt>Model</dt><dd>The overworld duper creates and ignites TNT rapidly in water; pistons duplicate sand and push it into the End portal, while the explosions accelerate the process. The bulk collector uses hopper minecarts, water channels, and a 1×1 accumulation point to fill shulker boxes, which are then sent to long-term chest storage. Crucial variables are the piston/TNT rate and the shulker-box-to-chest storage process.</dd></div>
+              <div><dt>Test</dt><dd>The machine was built from a community blueprint using Litematica. Because the blueprint did not clearly show which containers had to be filled, an extension was added to display container information, and the server was changed to allow client-side access to game data so the build could be verified layer by layer.</dd></div>
+              <div><dt>Result</dt><dd>The completed system produces <strong>432,000 sand or concrete-powder items per hour</strong>, compacts the output into shulker boxes, and stores those boxes in chests. Sand and concrete powder become effectively free resources, making the machine highly efficient and easy to use.</dd></div>
+              <div><dt>Limitation</dt><dd>The system is difficult to repair if a component fails, and it depends on exact reproduction of a community blueprint. Construction required extra client-side tooling and server settings, so maintaining or replicating the machine is more demanding than operating it.</dd></div>
             </dl>
             <div class="model-links">
-              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Visit full Minecraft archive <span aria-hidden="true">↗</span></a>
-              <a href="https://aeroptot.github.io/Minecraft-records/articles/Sand%20duper/" target="_blank" rel="noopener">Sand duper write-up</a>
-              <a href="https://aeroptot.github.io/Minecraft-records/articles/Trial%20farm/" target="_blank" rel="noopener">Trial Chamber write-up</a>
+              <a href="assets/figures/minecraft-sand-duper-flowchart.jpg" target="_blank" rel="noopener">View sand duper flowchart <span aria-hidden="true">↗</span></a>
+              <a href="https://aeroptot.github.io/Minecraft-records/articles/Sand%20duper/" target="_blank" rel="noopener">Read full write-up</a>
+              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Minecraft archive</a>
+            </div>
+          </article>
+
+          <article class="model-card">
+            <header class="model-header">
+              <div>
+                <p class="model-number">Model 02 · Integrated loot system</p>
+                <h3>Automated Trial Chamber Spawner and Loot System</h3>
+              </div>
+            </header>
+            <dl class="model-structure">
+              <div><dt>Question</dt><dd>How can Trial Chamber spawner activation, player transport, vault-key use, crafting, and sorting be interlocked into one continuous automated loot system?</dd></div>
+              <div><dt>Assumptions</dt><dd>
+                <ul class="detail-list">
+                  <li>The amount of loot produced by a Trial spawner depends on the number of players present.</li>
+                  <li>Vault keys should be consumed at a controlled interval so the player always carries zero keys and none are wasted.</li>
+                  <li>Stackable and unstackable items require different sorting paths.</li>
+                  <li>An integrated system must keep spawner activation, player transport, crafting, sorting, and storage operating together.</li>
+                </ul>
+              </dd></div>
+              <div><dt>Model</dt><dd>The Trial spawner cycle uses an ominous bottle and player presence to activate spawns, kills mobs quickly, moves players between spawners, and transports loot to storage. The vault cycle uses a timer to supply trial keys at fixed intervals. The storage system automatically crafts iron, emeralds, and diamonds into blocks, sorts stackable loot into chests, routes unstackable items to a dedicated sorter, and disposes of the remainder. Crucial variables are player count, key-timer interval, and sorting-system design.</dd></div>
+              <div><dt>Test</dt><dd>A timed minecart departure system was designed to send players one by one and to stop them with lever-controlled rails. The system was expanded to support multiple players. The sorting design came from an online blueprint and was integrated with an optimized water channel to transport loot through the full system.</dd></div>
+              <div><dt>Result</dt><dd>The completed Trial Chamber system is successful: every module is interlocked, the full process runs as one system, stackable and unstackable loot are both handled, and the machine is straightforward to operate. Multiple players can be delivered to the spawners to improve output.</dd></div>
+              <div><dt>Limitation</dt><dd>Throughput is still restricted by the number of available players and by the game rule limiting maximum mob spawns. Preventing outside mobs may require emptying the entire loading area. The machine also required several optimization iterations before all modules worked together reliably.</dd></div>
+            </dl>
+            <div class="model-links">
+              <a href="assets/figures/minecraft-trial-chamber-flowchart.png" target="_blank" rel="noopener">View Trial Chamber flowchart <span aria-hidden="true">↗</span></a>
+              <a href="https://aeroptot.github.io/Minecraft-records/articles/Trial%20farm/" target="_blank" rel="noopener">Read full write-up</a>
+              <a href="https://aeroptot.github.io/Minecraft-records/" target="_blank" rel="noopener">Minecraft archive</a>
             </div>
           </article>
         </div>
