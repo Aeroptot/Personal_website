@@ -757,8 +757,9 @@ h4 {
 
 .problem-figure-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 400px);
+  gap: 1.25rem 3rem;
+  justify-content: start;
   margin-top: 1rem;
 }
 
@@ -767,23 +768,22 @@ h4 {
 }
 
 .problem-figure {
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #faf9f5;
+  min-width: 0;
 }
 
 .problem-figure img {
   display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
   background: #ffffff;
+  object-fit: contain;
 }
 
 .problem-figure-panels {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 400px);
   gap: 3rem;
 }
 
@@ -933,6 +933,17 @@ h4 {
 
   .problem-figure-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .problem-figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  .problem-figure-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 }
 
