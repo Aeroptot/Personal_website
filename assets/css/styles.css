@@ -757,8 +757,8 @@ h4 {
 
 .problem-figure-grid {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
-  gap: 1.25rem 3rem;
+  grid-template-columns: repeat(2, 200px);
+  gap: 1rem;
   justify-content: start;
   margin-top: 1rem;
 }
@@ -773,8 +773,8 @@ h4 {
 
 .problem-figure img {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -783,8 +783,8 @@ h4 {
 
 .problem-figure-panels {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
-  gap: 3rem;
+  grid-template-columns: repeat(2, 200px);
+  gap: 1rem;
 }
 
 .problem-figure figcaption {
@@ -931,20 +931,6 @@ h4 {
     min-height: 200px;
   }
 
-  .problem-figure-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .problem-figure img {
-    width: 100%;
-    height: auto;
-  }
-
-  .problem-figure-panels {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
 }
 
 @media (max-width: 760px) {
