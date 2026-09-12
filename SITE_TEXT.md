@@ -35,6 +35,10 @@ Skip to content
 
 Max Zhang
 
+**Navigation: Thinking**
+
+Thinking
+
 **Navigation: Research**
 
 Research
@@ -46,10 +50,6 @@ Models
 **Navigation: Problems**
 
 Problems
-
-**Navigation: Thinking**
-
-Thinking
 
 **Navigation: GitHub**
 
@@ -83,45 +83,75 @@ reconstruct each piece of work.
 
 **Card 01 title**
 
-Research Papers
+How I Think Mathematically
 
 **Card 01 description**
 
-In-depth summaries of my NCMC random-walk paper and HiMCM carbon-footprint model, each with the full PDF and key findings.
+A short mathematical self-position.
 
 **Card 02 title**
 
-Models & Simulations
+Research Papers
 
 **Card 02 description**
 
-Two representative Minecraft machines I built, each shown through Question → Assumptions → Model → Test → Result → Limitation.
+In-depth summaries of my NCMC random-walk paper and HiMCM carbon-footprint model, each with the full PDF and key findings.
 
 **Card 03 title**
 
-Selected Problems
+Models & Simulations
 
 **Card 03 description**
 
-Four multi-part Ross application problems, shown with full prompts and my approach from first attempt to final solution.
+Two representative Minecraft machines I built, each shown through Question → Assumptions → Model → Test → Result → Limitation.
 
 **Card 04 title**
 
-How I Think Mathematically
+Selected Problems
 
 **Card 04 description**
 
-A short mathematical self-position.
+Four multi-part Ross application problems, shown with full prompts and my approach from first attempt to final solution.
 
 ---
 
-# Part 1: Research Papers
+# Part 1: How I Think Mathematically
+
+**Kicker**
+
+01 · Self-position
+
+**Heading**
+
+How I Think Mathematically
+
+**Section note**
+
+A short statement about how I approach mathematical work, kept within 100 words.
+
+**Statement**
+
+I see mathematical models through simple rules and parameters, identifying their
+underlying relationships and predictable patterns. But I also challenge myself:
+what if a principle is falsely stated? An unexpected result can expose a hidden
+assumption, an omitted variable, or a boundary the model cannot cross.
+Therefore, familiarity becomes mundane, while the border of rules becomes my
+comfort zone. Reaching beyond the edge of rules, to me, is like walking along
+the fence of a garden.
+
+**Word count label**
+
+76 words **(automatic)**
+
+---
+
+# Part 2: Research Papers
 
 ## Section heading
 
 **Kicker**
 
-01 · Pinned research
+02 · Pinned research
 
 **Heading**
 
@@ -433,13 +463,13 @@ carry uncertainty.
 
 ---
 
-# Part 2: Models & Simulations
+# Part 3: Models & Simulations
 
 ## Section heading
 
 **Kicker**
 
-02 · Completed work
+03 · Completed work
 
 **Heading**
 
@@ -589,13 +619,13 @@ Minecraft archive
 
 ---
 
-# Part 3: Selected Problems
+# Part 4: Selected Problems
 
 ## Section heading
 
 **Kicker**
 
-03 · Ross application problems
+04 · Ross application problems
 
 **Heading**
 
@@ -868,36 +898,6 @@ to unique factorization.
 Use modular arithmetic and finite group theory to construct factorizations
 systematically, or search computationally over residue classes when only a
 specific m is required.
-
----
-
-# Part 4: How I Think Mathematically
-
-**Kicker**
-
-04 · Self-position
-
-**Heading**
-
-How I Think Mathematically
-
-**Section note**
-
-A short statement about how I approach mathematical work, kept within 100 words.
-
-**Statement**
-
-I see mathematical models through simple rules and parameters, identifying their
-underlying relationships and predictable patterns. But I also challenge myself:
-what if a principle is falsely stated? An unexpected result can expose a hidden
-assumption, an omitted variable, or a boundary the model cannot cross.
-Therefore, familiarity becomes mundane, while the border of rules becomes my
-comfort zone. Reaching beyond the edge of rules, to me, is like walking along
-the fence of a garden.
-
-**Word count label**
-
-76 words **(automatic)**
 
 ---
 
