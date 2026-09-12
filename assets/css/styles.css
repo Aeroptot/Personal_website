@@ -757,9 +757,8 @@ h4 {
 
 .problem-figure-grid {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1rem;
-  justify-content: start;
   margin-top: 1rem;
 }
 
@@ -768,17 +767,14 @@ h4 {
 }
 
 .problem-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   min-width: 0;
-  text-align: center;
 }
 
 .problem-figure img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -787,9 +783,8 @@ h4 {
 
 .problem-figure-panels {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  justify-content: center;
 }
 
 .problem-figure figcaption {
