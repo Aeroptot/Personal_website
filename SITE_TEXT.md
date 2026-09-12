@@ -17,7 +17,7 @@ individually because they are structural, not content.
 
 **Page title**
 
-Mathematical Research and Modeling Portfolio | Max Xuming Zhang
+Mathematical Research and Modeling Portfolio | Max Zhang
 
 ## Accessibility
 
@@ -33,7 +33,7 @@ Skip to content
 
 **Brand**
 
-Max Xuming Zhang
+Max Zhang
 
 **Navigation: Research**
 
@@ -63,20 +63,21 @@ Mathematical Research & Modeling Portfolio
 
 **Name**
 
-Max Xuming Zhang
+Max Zhang
 
 **Introduction**
 
-I am interested in how mathematical models change when ideal assumptions meet
-memory, uncertainty, and human behavior. This portfolio collects my selected
-research, simulations, and problem-solving notes in probability, stochastic
-processes, statistics, and applied modeling. Rather than presenting mathematics
-only through final answers, I have included the assumptions, failed approaches,
-parameter choices, and revisions that shaped each piece of work.
+Have you ever wondered how mathematical models change when ideal assumptions
+meet outliers, uncertainty, and unpredictable human behavior? This portfolio
+collects my selected research, simulations, and problem-solving notes in
+probability, stochastic processes, statistics, and applied modeling. Rather
+than presenting mathematics only through final answers, I have included the
+assumptions, failed approaches, parameter choices, and revisions that
+reconstruct each piece of work.
 
 **Word count label**
 
-60 words **(automatic)**
+61 words **(automatic)**
 
 ## Section entry cards
 
@@ -86,8 +87,7 @@ Research Papers
 
 **Card 01 description**
 
-In-depth summaries of my NCMC random-walk paper and HiMCM carbon-footprint
-model, each with the full PDF and model-level findings.
+In-depth summaries of my NCMC random-walk paper and HiMCM carbon-footprint model, each with the full PDF and key findings.
 
 **Card 02 title**
 
@@ -95,8 +95,7 @@ Models & Simulations
 
 **Card 02 description**
 
-Two completed Minecraft machines, each shown through Question → Assumptions →
-Model → Test → Result → Limitation.
+Two representative Minecraft machines I built, each shown through Question → Assumptions → Model → Test → Result → Limitation.
 
 **Card 03 title**
 
@@ -104,8 +103,7 @@ Selected Problems
 
 **Card 03 description**
 
-Four multi-part Ross application problems, shown with full prompts and the path
-from first approach to final solution.
+Four multi-part Ross application problems, shown with full prompts and my approach from first attempt to final solution.
 
 **Card 04 title**
 
@@ -113,7 +111,7 @@ How I Think Mathematically
 
 **Card 04 description**
 
-A short mathematical self-position, kept within 100 words.
+A short mathematical self-position.
 
 ---
 
@@ -131,8 +129,7 @@ Research Papers
 
 **Section note**
 
-Each paper is presented both as a research summary and as a compact model card,
-with its full PDF available separately.
+Present each paper's key summary and its form as a compact model, with its full PDF available separately.
 
 ## Paper 1: NCMC
 
@@ -200,27 +197,31 @@ Is the memory-repulsion walker ultimately transient or recurrent?
 
 **Main finding 1**
 
-Pure repulsion is numerically transient. All 10,000 baseline trials escaped; the
-mean was 722.69 steps, the median was 579, the 95% CI was [712.88, 732.49], and
-the maximum was 4,886. A classical simple random walk needs roughly 2,500-3,000
-steps under the same setting.
+Memory-driven repulsion changes the walker's long-term behavior. Instead of
+returning repeatedly as a classical two-dimensional walker does, it tends to
+leave the finite lattice and escapes much faster than the memoryless case -
+about 723 steps on average, compared with roughly 2,500-3,000 steps.
 
 **Main finding 2**
 
-Three strong scaling laws emerged. τ(k) = 1608.628e^(−2.4155k) + 666.870
-(R² = 0.9956), τ(c) = 138.880e^(0.3002c) + 13.487 (R² = 0.9930), and
-τ(λ) = 659.880e^(8.7348λ) − 193.017 (R² = 0.9877).
+Escape time is exponentially sensitive to the three model controls. Increasing
+the Logistic steepness k makes escape faster; increasing the repulsion threshold
+c or making memory fade faster (larger λ) makes escape take longer. All three
+fitted relationships had R² above 0.98.
 
 **Main finding 3**
 
-Central attraction causes a sharp phase transition. Mean escape times are about
-2,700 steps at α = 0.2, 7,800 at α = 0.3, 28,000 at α = 0.4, and 120,000 at
-α = 0.5.
+Attraction strength creates a sharp phase transition. At low attraction strength
+α, escape is fast. Beyond about α = 0.2, the pull back toward the origin becomes
+strong enough that escape time grows explosively, suggesting a shift from
+transient to recurrent behavior.
 
 **Main finding 4**
 
-Classical behavior requires extreme parameters. The model approaches the
-memoryless case only near k ≈ −0.15, c ≈ 10.2, or λ ≈ 0.18.
+Classical memoryless behavior requires extreme settings. It appears only with a
+negative steepness k, which reverses repulsion into attraction; an extremely
+high threshold c, which makes the walker ignore memory; or a very fast decay λ,
+which erases past visits in a few steps.
 
 **Button: primary**
 
@@ -664,6 +665,23 @@ closes exactly when n is odd, so parity separates the two cases.
   pigeonhole principle guarantees such a fixed gap, proving that a balanced
   non-primitive prime n-wheel exists for every odd n.
 
+**Key figure 1 caption**
+
+Paper Figure 1 · Balanced 3-wheel example.
+
+**Key figure 2 caption**
+
+Paper Figure 3 · The non-primitive 4-wheel construction fails.
+
+**Key figure 3 caption**
+
+Paper Figure 4 · Balanced non-primitive 5-wheel: general construction and
+example.
+
+**Key figure 4 caption**
+
+Paper Figure 6 · Alternating series used to construct prime n-wheels.
+
 **Another possible method**
 
 Encode the balance conditions as a circulant linear system and analyze rank and
@@ -947,7 +965,7 @@ Visit site
 
 **Copyright**
 
-© 2026 Max Xuming Zhang · Mathematical Research & Modeling Portfolio
+© 2026 Max Zhang · Mathematical Research & Modeling Portfolio
 
 **GitHub link**
 
@@ -961,7 +979,7 @@ This is the text shown on `404.html`.
 
 **Browser tab title**
 
-Page not found | Max Xuming Zhang
+Page not found | Max Zhang
 
 **Eyebrow**
 

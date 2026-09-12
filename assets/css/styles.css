@@ -755,6 +755,35 @@ h4 {
   line-height: 1.75;
 }
 
+.problem-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.problem-figure {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #faf9f5;
+}
+
+.problem-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.problem-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 /* Thinking */
 
 .thinking-section {
@@ -968,6 +997,10 @@ h4 {
   }
 
   .result-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-figure-grid {
     grid-template-columns: 1fr;
   }
 

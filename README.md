@@ -1,6 +1,6 @@
 # Mathematical Research and Modeling Portfolio
 
-A personal portfolio site for **Max Xuming Zhang**, built as a lightweight,
+A personal portfolio site for **Max Zhang**, built as a lightweight,
 dependency-free static website ready to publish on GitHub Pages.
 
 The page is assembled from the guidelines in `Max_additional_information.pdf`
@@ -30,7 +30,7 @@ application problems, and Minecraft systems archive.
 - `assets/js/main.js` - small enhancements only (word counts, details
   accessibility). The page works without it.
 - `assets/papers/` - the complete NCMC paper and HiMCM 2024 solution PDFs.
-- `assets/figures/` - figures extracted from the NCMC and HiMCM papers.
+- `assets/figures/` - figures extracted from the NCMC, HiMCM, and Ross papers.
 - `SITE_TEXT.md` - every visible website string, organized for direct editing.
 - `PLACEHOLDERS.md` - content-status checklist and optional future refinements.
 - `.github/workflows/pages.yml` - automatic deployment to GitHub Pages.
