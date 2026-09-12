@@ -125,10 +125,6 @@ Four multi-part Ross application problems, shown with full prompts and my approa
 
 How I Think Mathematically
 
-**Section note**
-
-A short statement about how I approach mathematical work, kept within 100 words.
-
 **Statement**
 
 I see mathematical models through simple rules and parameters, identifying their
@@ -156,10 +152,6 @@ the fence of a garden.
 **Heading**
 
 Research Papers
-
-**Section note**
-
-Present each paper's key summary and its form as a compact model, with its full PDF available separately.
 
 ## Paper 1: NCMC
 
@@ -475,11 +467,6 @@ carry uncertainty.
 
 Models & Simulations
 
-**Section note**
-
-Two completed Minecraft machine systems, each shown through Question →
-Assumptions → Model → Test → Result → Limitation.
-
 ## Machine 1: Sand Duper
 
 **Model label**
@@ -630,11 +617,6 @@ Minecraft archive
 **Heading**
 
 Selected Problems
-
-**Section note**
-
-These are the four multi-part problems from my Ross application. Each card
-includes every prompt and the key path from first approach to final solution.
 
 ## Problem 1: Number Wheels
 
@@ -910,10 +892,6 @@ More on GitHub
 **Heading**
 
 Supplementary Project Materials
-
-**Section note**
-
-Other projects and archives published on my GitHub.
 
 ## Thought Constellation
 
