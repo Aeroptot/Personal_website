@@ -757,9 +757,13 @@ h4 {
 
 .problem-figure-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.problem-figure--wide {
+  grid-column: span 2;
 }
 
 .problem-figure {
@@ -775,6 +779,12 @@ h4 {
   height: auto;
   border-radius: 8px;
   background: #ffffff;
+}
+
+.problem-figure-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
 }
 
 .problem-figure figcaption {
@@ -920,6 +930,10 @@ h4 {
   .figure-empty {
     min-height: 200px;
   }
+
+  .problem-figure-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -1001,6 +1015,14 @@ h4 {
   }
 
   .problem-figure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-figure--wide {
+    grid-column: auto;
+  }
+
+  .problem-figure-panels {
     grid-template-columns: 1fr;
   }
 
