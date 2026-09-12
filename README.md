@@ -31,6 +31,7 @@ application problems, and Minecraft systems archive.
   accessibility). The page works without it.
 - `assets/papers/` - the complete NCMC paper and HiMCM 2024 solution PDFs.
 - `assets/figures/` - figures extracted from the NCMC and HiMCM papers.
+- `SITE_TEXT.md` - every visible website string, organized for direct editing.
 - `PLACEHOLDERS.md` - content-status checklist and optional future refinements.
 - `.github/workflows/pages.yml` - automatic deployment to GitHub Pages.
 
@@ -52,6 +53,9 @@ populated; no text or image placeholders remain. The header and footer link to
 `https://github.com/aeroptot`, inferred from the project URLs in the brief.
 Confirm or replace this with the intended GitHub account or repository link if
 needed.
+
+To revise the site copy, edit [SITE_TEXT.md](SITE_TEXT.md) and then ask Codex to
+sync the edited text back into the website.
 
 See [PLACEHOLDERS.md](PLACEHOLDERS.md) for the full content-status checklist.
 
